@@ -2,6 +2,7 @@
 	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
 	export let listOfItems = ['Home', 'Science', 'Philosophy', 'Art', 'Politics', 'About'];
 	export let isActive = 'Home';
+	import { base } from '$app/paths';
 
 	let zeroValues = new Array(listOfItems.length).fill(0);
 
@@ -56,9 +57,9 @@
       <NavLi href="/contact">Contact</NavLi> -->
 			{#each truthValues as { name, active }}
 				{#if name === 'Home'}
-					<NavLi href="/" {active}>Home</NavLi>
+					<NavLi href="{base}/" {active}>Home</NavLi>
 				{:else}
-					<NavLi href={'/' + name} {active}>{name}</NavLi>
+					<NavLi href={base + '/' + name} {active}>{name}</NavLi>
 				{/if}
 			{/each}
 		</NavUl>

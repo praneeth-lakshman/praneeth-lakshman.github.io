@@ -1,17 +1,18 @@
 <script>
-    import Custombar from "../Custombar.svelte";
-    import { P } from "flowbite-svelte"
+	import Custombar from '../Custombar.svelte';
+	import { P, Avatar } from 'flowbite-svelte';
 </script>
 
-<Custombar isActive="About"/>
+<Custombar isActive="About" />
 
-    <P size='xl' color="text-blue-600 dark:text-blue-500">Flowbite app will help you improve yourself by analysing your everyday life.</P>
-<P size='xl' color="text-blue-600 dark:text-blue-500" class="opacity-25">Flowbite app will help you improve yourself by analysing your everyday life.</P>
-<P size='xl' opacity={50} color="text-blue-600 dark:text-blue-500">Flowbite app will help you improve yourself by analysing your everyday life.</P>
-<P size='xl' opacity={25} color="text-blue-600 dark:text-blue-500">Flowbite app will help you improve yourself by analysing your everyday life.</P>
-
-<P color="text-blue-700 dark:text-blue-500">This text is in the blue color.</P>
-<P color="text-green-700 dark:text-green-500">This text is in the green color.</P>
-<P color="text-red-700 dark:text-red-500">This text is in the red color.</P>
-<P color="text-purple-700 dark:text-purple-500">This text is in the purple color.</P>
-<P color="text-teal-700 dark:text-teal-500">This text is in the teal color.</P>
+<div class="grid place-items-center w-screen pt-8 ">
+<div class="flex items-center space-x-4 p-8 border-[5px] rounded-3xl">
+	<Avatar src="avatar.png" border class="ring-red-400 dark:ring-red-300" size="lg" />
+	<div class="space-y-1 font-medium text-2xl dark:text-white">
+		<div>Praneeth L</div>
+		<div class="text-l text-amber-500 dark:text-amber-400">
+			Creator of <i>Conversations at Twilight</i>
+		</div>
+	</div>
+</div>
+</div>

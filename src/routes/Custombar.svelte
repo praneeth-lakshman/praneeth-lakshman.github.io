@@ -33,7 +33,6 @@
 			active: !!zeroValues[i]
 		};
 	});
-	console.log(truthValues);
 </script>
 
 <div class="relative px-8">

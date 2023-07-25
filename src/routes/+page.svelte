@@ -5,19 +5,33 @@
 	import Footer from './Footer.svelte';
 	let decoration = 'text-m md:text-5xl text-slate-200 pt-2 font-bold';
 	let textOpacities = [100, 50, 25];
+	console.log("loaded");
 </script>
 
 <Custombar isActive="Home" />
 <div class="text-center animate-in slide-in-from-bottom duration-1000">
-	{#each textOpacities as opacity}
-		<Heading align="center" class={decoration + ' opacity-' + opacity} color="white"
+		<Heading align="center" class='text-m md:text-5xl text-slate-200 pt-2 font-bold' color="white"
 			>Welcome to a <Span
 				underline
 				decorationClass="decoration-3 decoration-teal-200 decoration-double"
 				class="dark:text-rose-400">Journey.</Span
 			></Heading
 		>
-	{/each}
+	
+			<Heading align="center" class='text-m md:text-5xl text-slate-200 pt-2 font-bold opacity-75' color="white"
+			>Welcome to a <Span
+				underline
+				decorationClass="decoration-3 decoration-teal-200 decoration-double"
+				class="dark:text-rose-400">Journey.</Span
+			></Heading
+		>
+				<Heading align="center" class='text-m md:text-5xl text-slate-200 pt-2 font-bold opacity-50' color="white"
+			>Welcome to a <Span
+				underline
+				decorationClass="decoration-3 decoration-teal-200 decoration-double"
+				class="dark:text-rose-400">Journey.</Span
+			></Heading
+		>
 </div>
 <div class="pt-10" />
 <div class="items-center flex justify-center basis-full">
@@ -26,7 +40,7 @@
 
 <div class="pt-10" />
 <div
-	class="flex flex-wrap md:flex-nowrap px-5 dark:text-white space-y-4 md:space-y-0 lg:space-x-2 xl:space-x-4"
+	class="flex flex-wrap md:flex-nowrap px-5 dark:text-white space-y-4 md:space-y-0 lg:space-x-2 xl:space-x-4 "
 >
 	<div
 		class="basis-full md:basis-3/12 rounded-3xl border-4 border-pink-200 p-5 bg-gradient-to-b from-purple-900/100 to-blue-900/100 md:bg-gradient-to-r"
@@ -38,9 +52,9 @@
 		>
 		<div class="flex items-center space-x-4">
 			<Avatar src="avatar.png" border class="ring-red-400 dark:ring-red-300" size="lg" />
-			<div class="space-y-1 font-medium text-2xl dark:text-white">
+			<div class="space-y-1 font-medium text-xl dark:text-white">
 				<div>Praneeth L</div>
-				<div class="text-l text-amber-500 dark:text-amber-400">
+				<div class="text-sm text-amber-500 dark:text-amber-400">
 					Creator of <i>Conversations at Twilight</i>
 				</div>
 			</div>

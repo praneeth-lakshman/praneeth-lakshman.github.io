@@ -1,12 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 	<head>
 		<meta charset="utf-8" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		%sveltekit.head%
 	</head>
-	<body data-sveltekit-preload-data="hover">
+	<body data-sveltekit-preload-data="hover" class="bg-white dark:bg-gray-800">
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
+	<style>
+		body {
+			margin: 0;
+			font-family: 'Poppins', sans-serif;
+		}
+		@layer base {
+  			body {
+    		@apply text-body;
+		}
+
+  @screen lg { // applying font size for lg breakpoint
+    body {
+      @apply text-body-lg;
+    }
+  }
+}
+	</style>
 </html>

@@ -1,29 +1,40 @@
-<script>
-	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
+<script lang="ts">
+	import {
+		Navbar,
+		NavBrand,
+		NavLi,
+		NavUl,
+		NavHamburger,
+		Dropdown,
+		DropdownItem,
+		DropdownDivider,
+		Chevron
+	} from 'flowbite-svelte';
 	export let listOfItems = ['Home', 'Science', 'Philosophy', 'Art', 'Politics', 'About'];
 	export let isActive = 'Home';
+	let homeActive: boolean, scienceActive: boolean, philoActive: boolean, artActive: boolean, polActive: boolean, abtActive:boolean = false;
 	import { base } from '$app/paths';
 
 	let zeroValues = new Array(listOfItems.length).fill(0);
 
 	switch (isActive) {
 		case 'Home':
-			zeroValues[0] = 1;
+			homeActive = true;
 			break;
 		case 'Science':
-			zeroValues[1] = 1;
+			scienceActive = true;
 			break;
 		case 'Philosophy':
-			zeroValues[2] = 1;
+			philoActive = true;
 			break;
 		case 'Art':
-			zeroValues[3] = 1;
+			artActive = true;
 			break;
 		case 'Politics':
-			zeroValues[4] = 1;
+			polActive = true;
 			break;
 		case 'About':
-			zeroValues[5] = 1;
+			abtActive = true;
 			break;
 	}
 
@@ -33,6 +44,7 @@
 			active: !!zeroValues[i]
 		};
 	});
+	console.log(truthValues);
 </script>
 
 <div class="relative px-8">
@@ -49,18 +61,43 @@
 		</NavBrand>
 		<NavHamburger on:click={toggle} />
 		<NavUl {hidden}>
-			<!--       <NavLi href="/" active={true}>Home</NavLi>
-      <NavLi href="/about">About</NavLi>
-      <NavLi href="/services">Services</NavLi>
-      <NavLi href="/pricing">Pricing</NavLi>
-      <NavLi href="/contact">Contact</NavLi> -->
-			{#each truthValues as { name, active }}
-				{#if name === 'Home'}
-					<NavLi href="{base}/" {active}>Home</NavLi>
-				{:else}
-					<NavLi href={base + '/' + name} {active}>{name}</NavLi>
-				{/if}
-			{/each}
+			<NavLi href="{base}/" active={homeActive}>Home</NavLi>
+			<NavLi id="science" class="cursor-pointer" active={scienceActive}><Chevron aligned>Science</Chevron></NavLi>
+			<NavLi id="philo" class="cursor-pointer" active={philoActive}><Chevron aligned>Philosophy</Chevron></NavLi>
+			<NavLi id="art" class="cursor-pointer" active={artActive}><Chevron aligned>Art</Chevron></NavLi>
+			<NavLi id="pol" class="cursor-pointer" active={polActive}><Chevron aligned>Politics and Economy</Chevron></NavLi>
+			<NavLi id="abt" href={base + '/' + 'About'} active={abtActive}>About</NavLi>
+			<Dropdown triggeredBy="#science" class="w-44 z-20">
+				<DropdownItem href={base + '/' + 'Science'}>Overview of Science</DropdownItem>
+				<DropdownDivider />
+				<DropdownItem href={base + '/' + 'Science/DeepDive'}>Deep Dive</DropdownItem>
+				<DropdownItem href={base + '/' + 'Science/History'}>History of Science</DropdownItem>
+				<DropdownItem href={base + '/' + 'Science/Futurology'}>Futurology</DropdownItem>
+			</Dropdown>
+			<Dropdown triggeredBy="#philo" class="w-44 z-20">
+				<DropdownItem href={base + '/' + 'Philosophy'}>Overview of Philosophy</DropdownItem>
+				<DropdownDivider />
+				<DropdownItem href={base + '/' + 'Philosophy/Logic'}>Logic</DropdownItem>
+				<DropdownItem href={base + '/' + 'Philosophy/Knowledge'}>Knowledge</DropdownItem>
+				<DropdownItem href={base + '/' + 'Philosophy/Ethics'}>Ethics</DropdownItem>
+				<DropdownItem href={base + '/' + 'Philosophy/Theology'}>Theology</DropdownItem>
+			</Dropdown>
+						<Dropdown triggeredBy="#art" class="w-44 z-20">
+				<DropdownItem href={base + '/' + 'Art'}>Overview of Art</DropdownItem>
+				<DropdownDivider />
+				<DropdownItem href={base + '/' + 'Art/Judging'}>Judging art</DropdownItem>
+				<DropdownItem href={base + '/' + 'Art/Inspiration'}>Inspiration</DropdownItem>
+				<DropdownItem href={base + '/' + 'Art/Music'}>Music</DropdownItem>
+				<DropdownItem href={base + '/' + 'Art/Poems'}>Poems</DropdownItem>
+				<DropdownItem href={base + '/' + 'Art/VideoGames'}>Video Games</DropdownItem>
+			</Dropdown>
+							<Dropdown triggeredBy="#pol" class="w-44 z-20">
+				<DropdownItem href={base + '/' + 'Politics'}>Overview of P&E</DropdownItem>
+				<DropdownDivider />
+				<DropdownItem href={base + '/' + 'Politics/Ideologies'}>Ideologies</DropdownItem>
+				<DropdownItem href={base + '/' + 'Politics/Explainers'}>Inspiration</DropdownItem>
+				<DropdownItem href={base + '/' + 'Politics/History'}>History of P&E</DropdownItem>
+			</Dropdown>
 		</NavUl>
 	</Navbar>
 

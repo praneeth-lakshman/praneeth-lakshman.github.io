@@ -4,8 +4,8 @@
     <div
 		class="basis-full md:basis-3/12 rounded-3xl border-4 border-pink-200 p-5 bg-gradient-to-b from-purple-900/100 to-blue-900/100 md:bg-gradient-to-r"
 	>
-		<Span underline decorationClass="decoration-sky-500 decoration-wavy decoration-green-300"
-			><P class="dark:text-cyan-500 text-xl md:text-2xl pb-5" weight="black" align="center"
+		<Span underline decorationClass="decoration-sky-500 decoration-double"
+			><P class="dark:text-cyan-300 text-xl md:text-2xl pb-5" weight="black" align="center"
 				>About me
 			</P></Span
 		>

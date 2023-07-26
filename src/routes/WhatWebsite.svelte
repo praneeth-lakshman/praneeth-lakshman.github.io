@@ -1,15 +1,10 @@
 <script lang="ts">
-	import Custombar from './Custombar.svelte';
-
-	import { GradientButton, P, Span, Avatar } from 'flowbite-svelte';
-	import Footer from './Footer.svelte';
-	import PageHeading from './PageHeading.svelte';
-	import AboutMe from './AboutMe.svelte';
+	import { P, Span } from 'flowbite-svelte';
 	console.log("loaded");
 </script>
 
 <div class="basis-full md:basis-6/12 rounded-3xl border-4 p-5 bg-blue-900/100 border-pink-200">
-		<Span underline decorationClass="decoration-sky-500 decoration-wavy decoration-green-300"
+		<Span underline decorationClass="decoration-sky-300 decoration-double "
 			><P class="dark:text-purple-300 text-xl md:text-2xl pb-5" weight="black" align="center"
 				>What this website is</P
 			></Span

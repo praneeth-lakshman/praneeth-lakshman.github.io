@@ -2,7 +2,7 @@
 	import Inspiration from './Inspiration.svelte';
 	import WhatWebsite from './WhatWebsite.svelte';
 	import Custombar from './Custombar.svelte';
-	import { GradientButton, P, Span, Avatar } from 'flowbite-svelte';
+	import { GradientButton } from 'flowbite-svelte';
 	import Footer from './Footer.svelte';
 	import PageHeading from './PageHeading.svelte';
 	import AboutMe from './AboutMe.svelte';

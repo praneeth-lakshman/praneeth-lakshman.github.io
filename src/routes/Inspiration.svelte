@@ -1,19 +1,13 @@
 <script lang="ts">
-  import WhatWebsite from './WhatWebsite.svelte';
 
-	import Custombar from './Custombar.svelte';
-
-	import { GradientButton, P, Span, Avatar } from 'flowbite-svelte';
-	import Footer from './Footer.svelte';
-	import PageHeading from './PageHeading.svelte';
-	import AboutMe from './AboutMe.svelte';
+	import { P, Span } from 'flowbite-svelte';
 	console.log("loaded");
 </script>
 
 <div
 		class="basis-full md:basis-3/12 text-fuchsia-400 rounded-3xl border-4 p-5 bg-gradient-to-t from-purple-900/100 to-blue-900/100 md:bg-gradient-to-l border-pink-200"
 	>
-		<Span underline decorationClass="decoration-sky-500 decoration-wavy decoration-green-300 ">
+		<Span underline decorationClass="decoration-sky-500 decoration-double">
 			<P class="dark:text-fuchsia-300 text-xl md:text-2xl pb-5" weight="black" align="center"
 				>Some inspiration</P
 			>

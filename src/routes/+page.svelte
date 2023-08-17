@@ -9,7 +9,7 @@
 	console.log('loaded');
 </script>
 
-<Custombar isActive="Home" />
+<Custombar />
 <PageHeading />
 <div class="pt-10" />
 <div class="items-center flex justify-center basis-full">

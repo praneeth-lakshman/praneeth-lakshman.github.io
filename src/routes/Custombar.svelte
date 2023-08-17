@@ -11,16 +11,17 @@
 		Chevron
 	} from 'flowbite-svelte';
 	export let listOfItems = ['Home', 'Science', 'Philosophy', 'Art', 'Politics', 'About'];
-	export let isActive = 'Home';
-	let homeActive: boolean, scienceActive: boolean, philoActive: boolean, artActive: boolean, polActive: boolean, abtActive:boolean = false;
+	export let isActive: string;
+	let scienceActive: boolean,
+		philoActive: boolean,
+		artActive: boolean,
+		polActive: boolean,
+		abtActive: boolean = false;
 	import { base } from '$app/paths';
 
 	let zeroValues = new Array(listOfItems.length).fill(0);
 
 	switch (isActive) {
-		case 'Home':
-			homeActive = true;
-			break;
 		case 'Science':
 			scienceActive = true;
 			break;
@@ -37,14 +38,6 @@
 			abtActive = true;
 			break;
 	}
-
-	const truthValues = listOfItems.map(function (x, i) {
-		return {
-			name: x,
-			active: !!zeroValues[i]
-		};
-	});
-	console.log(truthValues);
 </script>
 
 <div class="relative px-8">
@@ -61,11 +54,18 @@
 		</NavBrand>
 		<NavHamburger on:click={toggle} />
 		<NavUl {hidden}>
-			<NavLi href="{base}/" active={homeActive}>Home</NavLi>
-			<NavLi id="science" class="cursor-pointer" active={scienceActive}><Chevron aligned>Science</Chevron></NavLi>
-			<NavLi id="philo" class="cursor-pointer" active={philoActive}><Chevron aligned>Philosophy</Chevron></NavLi>
-			<NavLi id="art" class="cursor-pointer" active={artActive}><Chevron aligned>Art</Chevron></NavLi>
-			<NavLi id="pol" class="cursor-pointer" active={polActive}><Chevron aligned>Politics and Economy</Chevron></NavLi>
+			<NavLi id="science" class="cursor-pointer" active={scienceActive}
+				><Chevron aligned>Science</Chevron></NavLi
+			>
+			<NavLi id="philo" class="cursor-pointer" active={philoActive}
+				><Chevron aligned>Philosophy</Chevron></NavLi
+			>
+			<NavLi id="art" class="cursor-pointer" active={artActive}
+				><Chevron aligned>Art</Chevron></NavLi
+			>
+			<NavLi id="pol" class="cursor-pointer" active={polActive}
+				><Chevron aligned>Politics and Economy</Chevron></NavLi
+			>
 			<NavLi id="abt" href={base + '/' + 'About'} active={abtActive}>About</NavLi>
 			<Dropdown triggeredBy="#science" class="w-44 z-20">
 				<DropdownItem href={base + '/' + 'Science'}>Overview of Science</DropdownItem>
@@ -82,16 +82,15 @@
 				<DropdownItem href={base + '/' + 'Philosophy/Ethics'}>Ethics</DropdownItem>
 				<DropdownItem href={base + '/' + 'Philosophy/Theology'}>Theology</DropdownItem>
 			</Dropdown>
-						<Dropdown triggeredBy="#art" class="w-44 z-20">
+			<Dropdown triggeredBy="#art" class="w-44 z-20">
 				<DropdownItem href={base + '/' + 'Art'}>Overview of Art</DropdownItem>
 				<DropdownDivider />
 				<DropdownItem href={base + '/' + 'Art/Judging'}>Judging art</DropdownItem>
-				<DropdownItem href={base + '/' + 'Art/Inspiration'}>Inspiration</DropdownItem>
 				<DropdownItem href={base + '/' + 'Art/Music'}>Music</DropdownItem>
 				<DropdownItem href={base + '/' + 'Art/Poems'}>Poems</DropdownItem>
 				<DropdownItem href={base + '/' + 'Art/VideoGames'}>Video Games</DropdownItem>
 			</Dropdown>
-							<Dropdown triggeredBy="#pol" class="w-44 z-20">
+			<Dropdown triggeredBy="#pol" class="w-44 z-20">
 				<DropdownItem href={base + '/' + 'Politics'}>Overview of P&E</DropdownItem>
 				<DropdownDivider />
 				<DropdownItem href={base + '/' + 'Politics/Ideologies'}>Ideologies</DropdownItem>

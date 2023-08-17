@@ -5,7 +5,11 @@ const config = {
 		'./node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}'
 	],
 
-	plugins: [require('flowbite/plugin'), require('tailwindcss-animate')],
+	plugins: [
+		require('flowbite/plugin'),
+		require('tailwindcss-animate'),
+		require('@tailwindcss/typography')
+	],
 
 	darkMode: 'class',
 
@@ -24,7 +28,11 @@ const config = {
 					700: '#EB4F27',
 					800: '#CC4522',
 					900: '#A5371B'
-				}
+				},
+				purplelove1: '#cc2b5e',
+				purplelove2: '#753a88',
+				greenbeach1: '#02aab0',
+				greenbeach2: '#00cdac',
 			}
 		}
 	}

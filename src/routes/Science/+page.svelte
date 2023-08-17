@@ -64,7 +64,7 @@
 			>
 
 			<P class="px-3 pb-5 md:text-l text-sm" align="center">
-				CLick here if you want to understand the coming waves of science and technology.
+				Click here if you want to understand the coming waves of science and technology.
 			</P>
 		</a>
 	</div>

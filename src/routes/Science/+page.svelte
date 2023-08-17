@@ -64,8 +64,7 @@
 			>
 
 			<P class="px-3 pb-5 md:text-l text-sm" align="center">
-				Click here if you want to understand core topics within Physics, Biology, Chemistry, and
-				Psychology - but also be able to explain it to others with ease.
+				CLick here if you want to understand the coming waves of science and technology.
 			</P>
 		</a>
 	</div>

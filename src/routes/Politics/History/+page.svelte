@@ -1,7 +1,10 @@
-<script>
+<script lang="ts">
 	import { Heading, Span, P, Breadcrumb, BreadcrumbItem } from 'flowbite-svelte';
 	import Custombar from '../../Custombar.svelte';
-	import Footer from '../../Footer.svelte';
+	import BlogCard from '../../BlogCard.svelte';
+	import SectionLayout from '../../SectionLayout.svelte';
+	import BlogCardLayout from '../../BlogCardLayout.svelte';
+	import {History as list} from '../../listOfArticles';
 </script>
 
 <Custombar isActive="Politics" />
@@ -10,28 +13,12 @@
 	<BreadcrumbItem href="/Politics">Politics and Economics</BreadcrumbItem>
 	<BreadcrumbItem>History of Politics and Economics</BreadcrumbItem>
 </Breadcrumb>
-<div class="text-center animate-in slide-in-from-bottom duration-1000">
-	<Heading align="center" class="text-m md:text-5xl text-slate-200 pt-2 font-bold" color="white"
-		><Span
-			underline
-			decorationClass="decoration-3 decoration-blue-500 decoration-double"
-			class="dark:text-green-300">History of Society</Span
-		></Heading
-	>
-	<br />
-	<P italic align="center"
-		><b
-			>Understanding the global, not just the Western, development of civilisation through the lens
-			of economics and politics</b
-		></P
-	>
+
+<div class="md:grid md:grid-cols-5 md:overscroll-contain">
+	<SectionLayout
+		title="History of Society"
+		description="Understanding the global, not just the Western, development of civilisation through the lens
+			of economics and politics"
+	/>
+	<BlogCardLayout {list} />
 </div>
-<br />
-<br />
-<br />
-<br />
-<br />
-<Heading align="center" class="text-m md:text-5xl text-slate-200 pt-2 font-bold" color="white"
-	>Content Will Be Added Soon; Thank you!</Heading
->
-<Footer />

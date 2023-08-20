@@ -94,7 +94,7 @@
 				<DropdownItem href={base + '/' + 'Politics'}>Overview of P&E</DropdownItem>
 				<DropdownDivider />
 				<DropdownItem href={base + '/' + 'Politics/Ideologies'}>Ideologies</DropdownItem>
-				<DropdownItem href={base + '/' + 'Politics/Explainers'}>Inspiration</DropdownItem>
+				<DropdownItem href={base + '/' + 'Politics/Explainers'}>Explainers</DropdownItem>
 				<DropdownItem href={base + '/' + 'Politics/History'}>History of P&E</DropdownItem>
 			</Dropdown>
 		</NavUl>

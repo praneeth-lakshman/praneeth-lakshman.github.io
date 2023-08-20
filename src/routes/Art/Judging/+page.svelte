@@ -1,7 +1,9 @@
 <script>
-	import { Heading, Span, P, Breadcrumb, BreadcrumbItem } from 'flowbite-svelte';
+	import { Breadcrumb, BreadcrumbItem } from 'flowbite-svelte';
 	import Custombar from '../../Custombar.svelte';
-	import Footer from '../../Footer.svelte';
+	import SectionLayout from '../../SectionLayout.svelte';
+	import {Judging as list} from '../../listOfArticles'
+	import BlogCardLayout from '../../BlogCardLayout.svelte';
 </script>
 
 <Custombar isActive="Art" />
@@ -10,23 +12,9 @@
 	<BreadcrumbItem href="/Art">Art</BreadcrumbItem>
 	<BreadcrumbItem>Judging</BreadcrumbItem>
 </Breadcrumb>
-<div class="text-center animate-in slide-in-from-bottom duration-1000">
-	<Heading align="center" class="text-m md:text-5xl text-slate-200 pt-2 font-bold" color="white"
-		><Span
-			underline
-			decorationClass="decoration-3 decoration-blue-500 decoration-double"
-			class="dark:text-green-300">Judging Art</Span
-		></Heading
-	>
-	<br />
-	<P italic align="center"><b>Join my exploration as I find out: what makes art good?</b></P>
+
+<div class="md:grid md:grid-cols-5 md:overscroll-contain">
+
+	<SectionLayout title="Judging Art" description="Join my exploration as I find out: what makes art good?" />
+<BlogCardLayout {list} />
 </div>
-<br />
-<br />
-<br />
-<br />
-<br />
-<Heading align="center" class="text-m md:text-5xl text-slate-200 pt-2 font-bold" color="white"
-	>Content Will Be Added Soon; Thank you!</Heading
->
-<Footer />

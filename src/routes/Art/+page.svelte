@@ -23,7 +23,7 @@
 	<div
 		class="basis-full rounded-3xl border-4 border-red-200 p-5 bg-gradient-to-b from-purple-900/100 to-blue-600/100 md:bg-gradient-to-tr hover:bg-gradient-to-bl hover:border-purple-600"
 	>
-		<a href={base + '/Science/DeepDive'}>
+		<a href={base + '/Art/Judging'}>
 			<Span underline decorationClass="decoration-wavy decoration-green-300"
 				><P class="dark:text-purple-300 text-xl md:text-2xl pb-5" weight="black" align="center"
 					>Judging</P
